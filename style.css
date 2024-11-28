@@ -98,11 +98,33 @@ h1, h2 {
 
     .menu li {
         margin: 20px 0;
-        text-align: center;
+        text-align: center; /* Выравнивание пунктов меню по центру */
     }
 
     .menu a:hover {
         color: #6F6F6F;
+    }
+
+    /* Выравнивание текста и заголовков по центру на мобильных устройствах */
+    .main_text_page_home {
+        padding: 5px;
+        margin-left: 0;
+        margin-top: 12%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center; /* Выравнивание блока текста по центру */
+    }
+
+    .main_text_page_home h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+        text-align: center; /* Выравнивание заголовка по центру */
+    }
+
+    .main_text_page_home p {
+        font-size: 14px;
+        margin-left: 0;
+        text-align: center; /* Выравнивание текста по центру */
     }
 }
 
@@ -111,15 +133,15 @@ h1, h2 {
     /* Стили для блока с текстом */
     .main_text_page_home h1 {
         margin: 0;
-        margin-left: 40px; /* Меньше отступ слева для удобства */
-        font-size: 65px; /* Уменьшение размера шрифта на более крупных экранах */
+        margin-left: 40px;
+        font-size: 65px;
         color: #A5A5A5;
     }
 
     .main_text_page_home p {
         margin: 0;
         margin-left: 40px;
-        font-size: 20px; /* Меньший размер шрифта для текста */
+        font-size: 20px;
         color: #6F6F6F;
     }
 
@@ -136,26 +158,6 @@ h1, h2 {
     }
 }
 
-/* Подстройка под мобильные устройства с экраном до 412px */
-@media (max-width: 412px) {
-    .main_text_page_home {
-        padding: 5px;
-        margin-left: 0;
-        margin-top: 12%;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .main_text_page_home h1 {
-        font-size: 28px;
-        margin-bottom: 8px;
-    }
-
-    .main_text_page_home p {
-        font-size: 14px;
-        margin-left: 0;
-    }
-}
 
 
 
