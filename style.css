@@ -98,21 +98,21 @@ h1, h2 {
 
     .menu li {
         margin: 20px 0;
-        text-align: left; /* Выравнивание пунктов меню по левому краю */
+        text-align: center;
     }
 
     .menu a:hover {
         color: #6F6F6F;
     }
 
-    /* Выравнивание текста и заголовков по левому краю только на мобильных устройствах */
+    /* Выравнивание текста по левому краю на мобильных устройствах */
     .main_text_page_home {
         padding: 5px;
         margin-left: 0;
         margin-top: 12%;
         max-width: 100%;
         width: 100%;
-        text-align: left; /* Выравнивание блока текста по левому краю */
+        text-align: left; /* Выравнивание по левому краю */
     }
 
     .main_text_page_home h1 {
@@ -128,20 +128,20 @@ h1, h2 {
     }
 }
 
-/* Адаптив для экрана Pixel 7 (от 769px до 1080px) */
+/* Адаптив для экрана Pixel 7 */
 @media (max-width: 1080px) and (min-width: 769px) {
     /* Стили для блока с текстом */
     .main_text_page_home h1 {
         margin: 0;
-        margin-left: 40px;
-        font-size: 65px;
+        margin-left: 40px; /* Меньше отступ слева для удобства */
+        font-size: 65px; /* Уменьшение размера шрифта на более крупных экранах */
         color: #A5A5A5;
     }
 
     .main_text_page_home p {
         margin: 0;
         margin-left: 40px;
-        font-size: 20px;
+        font-size: 20px; /* Меньший размер шрифта для текста */
         color: #6F6F6F;
     }
 
@@ -157,6 +157,31 @@ h1, h2 {
         width: 100%;
     }
 }
+
+/* Подстройка под мобильные устройства с экраном до 412px */
+@media (max-width: 412px) {
+    .main_text_page_home {
+        padding: 5px;
+        margin-left: 0;
+        margin-top: 12%;
+        max-width: 100%;
+        width: 100%;
+        text-align: left; /* Выравнивание по левому краю */
+    }
+
+    .main_text_page_home h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+        text-align: left; /* Выравнивание заголовка по левому краю */
+    }
+
+    .main_text_page_home p {
+        font-size: 14px;
+        margin-left: 0;
+        text-align: left; /* Выравнивание текста по левому краю */
+    }
+}
+
 
 
 
