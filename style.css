@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -27,23 +27,23 @@ h1, h2 {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    justify-content: flex-start; /* Логотип слева, меню справа */
+    justify-content: flex-start;
     position: relative;
 }
 
 /* Бургер-иконка */
 .burger-menu {
-    font-size: 30px; /* Сделано одинаково с логотипом */
+    font-size: 30px;
     cursor: pointer;
     color: whitesmoke;
     margin-right: 20px;
-    display: none; /* Прячем бургер-иконку по умолчанию */
+    display: none;
 }
 
 /* Логотип */
 .logo h1 {
     margin: 0;
-    font-size: 36px; /* Размер логотипа */
+    font-size: 36px;
 }
 
 .logo a {
@@ -51,7 +51,7 @@ h1, h2 {
     color: whitesmoke;
 }
 
-/* Стили для меню */
+/* Меню */
 .menu {
     display: flex;
     list-style: none;
@@ -59,7 +59,6 @@ h1, h2 {
     padding: 0;
 }
 
-/* Убираем подчеркивание у ссылок в меню */
 .menu li a {
     text-decoration: none;
     color: whitesmoke;
@@ -74,17 +73,17 @@ h1, h2 {
     color: #6F6F6F;
 }
 
-/* Медиа-запрос для маленьких экранов */
+/* Медиа-запросы для мобильных экранов (до 768px) */
 @media (max-width: 768px) {
     .burger-menu {
-        display: block; /* Показываем бургер-иконку */
+        display: block; 
     }
 
     .menu {
         flex-direction: column;
         position: fixed;
         top: 0;
-        right: -100%; /* Меню начнёт выезжать с правой стороны */
+        right: -100%;
         width: 250px;
         height: 100%;
         background-color: black;
@@ -94,7 +93,7 @@ h1, h2 {
     }
 
     .menu.active {
-        left: 0; /* Меню будет видно при активации */
+        left: 0;
     }
 
     .menu li {
@@ -102,106 +101,62 @@ h1, h2 {
         text-align: center;
     }
 
-    /* Цвет при наведении на ссылки в меню */
     .menu a:hover {
         color: #6F6F6F;
     }
-   
 }
 
-/* Размещение элементов на больших экранах */
-@media (min-width: 769px) {
-    .logo {
-        order: 1; /* Логотип всегда слева */
-        margin-left: 80px; /* Отступ слева для логотипа, как у меню */
-    }
-    .logo h1{
-        font-size: 36px;
-    }
-
-    .menu {
-        order: 2; /* Меню всегда справа */
-        margin-left: auto; /* Отодвигаем меню вправо */
-        padding-right: 80px; /* Добавляем отступ справа, чтобы меню не было слито с краем */
-    }
-    
-    .menu li {
-        margin: 0 20px; /* Отступы между пунктами меню */
+/* Адаптив для экрана Pixel 7 */
+@media (max-width: 1080px) and (min-width: 769px) {
+    /* Стили для блока с текстом */
+    .main_text_page_home h1 {
+        margin: 0;
+        margin-left: 40px; /* Меньше отступ слева для удобства */
+        font-size: 65px; /* Уменьшение размера шрифта на более крупных экранах */
+        color: #A5A5A5;
     }
 
-    .menu a {
-        font-size: 21px; /* Размер шрифта */
+    .main_text_page_home p {
+        margin: 0;
+        margin-left: 40px;
+        font-size: 20px; /* Меньший размер шрифта для текста */
+        color: #6F6F6F;
+    }
+
+    .main_text_page_home {
+        padding: 20px;
+        position: absolute;
+        margin-top: 12%;
+        left: 0;
+        color: white;
+        font-size: 24px;
+        z-index: 1;
+        max-width: 80%;
+        width: 100%;
     }
 }
-/* Стили для блока с текстом */
-.main_text_page_home h1 {
-    margin: 0;
-    margin-left: 80px;   /* Отступ слева */
-    font-size: 80px;
-    justify-content: center;
-    color: #A5A5A5;
-}
 
-.main_text_page_home p {
-    margin: 0;
-    margin-left: 80px;   /* Отступ слева */
-    font-size: 24px;
-    color:#6F6F6F;
-}
-
-.main_text_page_home {
-    padding: 20px;
-    position: absolute;       /* Текст будет поверх изображения */
-    margin-top: 12%;           /* Расположение текста сверху */
-    left: 0;                   /* Отступ слева */
-    color: white;              /* Цвет текста */
-    font-size: 24px;           /* Размер шрифта для текста */
-    z-index: 1;                /* Устанавливаем текст поверх изображения */
-    max-width: 80%;            /* Ограничиваем ширину текста */
-    width: 100%;               /* Расширяем контейнер на всю ширину */
-}
-
-/* Медиа запросы для экрана шириной до 412px */
+/* Подстройка под мобильные устройства с экраном до 412px */
 @media (max-width: 412px) {
     .main_text_page_home {
         padding: 5px;
-        margin-left: 0;        /* Убираем отступ слева на мобильных устройствах */
-        margin-top: 12%;       /* Немного увеличиваем отступ сверху */
-        max-width: 100%;       /* Ширина блока теперь 100% */
-        width: 100%;           /* Текст будет растянут на всю ширину */
+        margin-left: 0;
+        margin-top: 12%;
+        max-width: 100%;
+        width: 100%;
     }
 
     .main_text_page_home h1 {
-        font-size: 28px;       /* Уменьшаем размер заголовка */
-        margin-bottom: 8px;    /* Меньше отступ снизу */
+        font-size: 28px;
+        margin-bottom: 8px;
     }
 
     .main_text_page_home p {
-        font-size: 14px;       /* Уменьшаем размер текста */
-        margin-left:0;        /* Убираем отступ слева */
+        font-size: 14px;
+        margin-left: 0;
     }
 }
 
-/* Дополнительные настройки для экрана шириной до 915px */
-@media (max-width: 412px) {
-    .main_text_page_home {
-        padding: 10px;
-        margin-left: 0;        /* Убираем отступ слева */
-        max-width: 100%;       /* Увеличиваем ширину текста до 100% */
-        width: 100%;           /* Растягиваем блок на всю ширину */
-        text-align:center;
-    }
-
-    .main_text_page_home h1 {
-        margin-left: 0px;
-        font-size: 40px;         /* Увеличиваем размер шрифта для заголовка */
-    }
-
-    .main_text_page_home p {
-        font-size: 18px; /* Увеличиваем размер шрифта для текста */
-        margin-left:-10%;
-    }
-}
 
 
 
