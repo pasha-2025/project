@@ -1,0 +1,135 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Kanit', sans-serif;
+    list-style: none;
+}
+
+h1, h2 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+}
+
+/* Навигационная панель */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: flex-start; /* Логотип слева, меню справа */
+    position: relative;
+}
+
+/* Бургер-иконка */
+.burger-menu {
+    font-size: 30px; /* Сделано одинаково с логотипом */
+    cursor: pointer;
+    color: whitesmoke;
+    margin-right: 20px;
+    display: none; /* Прячем бургер-иконку по умолчанию */
+}
+
+/* Логотип */
+.logo h1 {
+    margin: 0;
+    font-size: 36px; /* Размер логотипа */
+}
+
+.logo a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Стили для меню */
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Убираем подчеркивание у ссылок в меню */
+.menu li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu a {
+    font-size: 23px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #6F6F6F;
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Показываем бургер-иконку */
+    }
+
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Меню начнёт выезжать с правой стороны */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        padding-top: 60px;
+        transition: right 0.4s ease;
+        z-index: 10;
+    }
+
+    .menu.active {
+        left: 0; /* Меню будет видно при активации */
+    }
+
+    .menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    /* Цвет при наведении на ссылки в меню */
+    .menu a:hover {
+        color: #6F6F6F;
+    }
+   
+}
+
+/* Размещение элементов на больших экранах */
+@media (min-width: 769px) {
+    .logo {
+        order: 1; /* Логотип всегда слева */
+        margin-left: 80px; /* Отступ слева для логотипа, как у меню */
+    }
+    .logo h1{
+        font-size: 36px;
+    }
+
+    .menu {
+        order: 2; /* Меню всегда справа */
+        margin-left: auto; /* Отодвигаем меню вправо */
+        padding-right: 80px; /* Добавляем отступ справа, чтобы меню не было слито с краем */
+    }
+    
+    .menu li {
+        margin: 0 20px; /* Отступы между пунктами меню */
+    }
+
+    .menu a {
+        font-size: 21px; /* Размер шрифта */
+    }
+}
+
