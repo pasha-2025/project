@@ -183,7 +183,7 @@ h1, h2 {
 }
 
 /* Дополнительные настройки для экрана шириной до 915px */
-@media (max-width: 915px) {
+@media (max-width: 412px) {
     .main_text_page_home {
         padding: 10px;
         margin-left: 0;        /* Убираем отступ слева */
